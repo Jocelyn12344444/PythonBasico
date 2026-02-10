@@ -1,0 +1,2 @@
+# PythonBasico
+secciones de python 
