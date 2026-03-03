@@ -4,6 +4,7 @@ from Ogro import *
 
 zombie = Zombie(10,1)
 ogro = Ogro(20,3)
+
 def batalla (e1: Enemigo, e2: Enemigo):
     e1.habla()
     e2.habla()
@@ -21,11 +22,13 @@ def batalla (e1: Enemigo, e2: Enemigo):
         e2.punto_energia -= e1.ataque
 
     print("###################")
-    if e1.punto_energia > 0:
-           print(f"{e1.get_tipo_enemigo()}gano!!")
-    else:
+    if e1.puntos_energia > 0:
         print(f"{e2.get_tipo_enemigo()}gano!!")
+    else:
+        print(f"{e1.get_tipo_enemigo()}gano!!")
 print("============BATALLA===========")
-batalla(zombie,ogro)              
+batalla(zombie,ogro) 
+print("============ FIN DE LA BATALLA===========")
+           
 #print(f"{zombie.get_tipo_enemigo()}tiene{zombie.punto_energia}de energia y ataca con {zombie.ataque}")
 #print(f"{zombie.get_tipo_enemigo()}tiene{ogro.punto_energia}de energia y ataca con {ogro.ataque}")
